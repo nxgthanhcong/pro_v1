@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/icon.jpg">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <title>Ng Thanh Cong Personal Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.3.0/introjs.min.css"
+        integrity="sha512-YZO1kAqr8VPYJMaOgT4ZAIP4OeCuAWoZqgdvVYjeqyfieNWrUTzZrrxpgAdDrS7nV3sAVTKdP6MSKhqaMU5Q4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.3.0/intro.min.js"
+        integrity="sha512-WYNEDpX7FCz0ejmdUFl444n+v7gDgDFYmxy2YBx99v15UUk3zU5ZWYFBXFCvWYvd+nv/guwUnXmrecK7Ee0Wtg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body id="body" background="./assets/images/background/bg4.jpg">
+    <div class="ML">
+        <!-- <div class="android-btn" onclick="init()">
+            <i class="fas fa-camera"></i>
+        </div> -->
+        <div id="webcam-container"></div>
+    </div>
+    <div class="robot-btn hide">
+        <i class="fas fa-robot"></i>
+    </div>
+    <div class="cv-content hide">
+        <i class="fas fa-times cv-close"></i>
+        <embed src="./assets/images/cv.pdf" width="100%" />
+    </div>
+    <div class="music-player hide">
+        <!-- <div class="music-player music-player"> -->
+        <div class="music-player__dashboard">
+            <div class="music-player__header">
+                <div class="down-btn">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="text">
+                    <p>Now playing:</p>
+                    <h3>String 3dfsdf</h3>
+                </div>
+                <div class="plus-btn">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+            </div>
+            <div class="music-player__song">
+                <div class="song__thumb">
+                </div>
+
+                <!-- <img src="./images/maxresdefault.jpg" alt=""> -->
+            </div>
+            <div class="music-player__controls">
+                <div class="control-btn repeat-btn">
+                    <i class="fas fa-redo-alt"></i>
+                </div>
+                <div class="control-btn prev-btn">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="control-btn toggle-play-btn">
+                    <div class="play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="pause-btn">
+                        <i class="fas fa-pause"></i>
+                    </div>
+                </div>
+                <div class="control-btn next-btn">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="control-btn random-btn">
+                    <i class="fas fa-random"></i>
+                </div>
+            </div>
+            <div class="progress">
+                <input id="progress" type="range" min="0" max="100" value="0" step="1"></input>
+                <span></span>
+            </div>
+        </div>
+        <audio id="mucsic-player__audio" src=""></audio>
+        <div class="music-player__list-songs"></div>
+    </div>
+    <div id="header">
+        <div class="container grid wide">
+            <!-- <h1><a href="/">Ng Thanh Cong</a></h1> -->
+
+            <svg class="svgText">
+                <symbol id="s-text">
+                    <text text-anchor="left" x="0%" y="80%">Ng Thanh Cong</text>
+                </symbol>
+
+                <g class="g-ants">
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                </g>
+            </svg>
+
+            <p>
+                <span class="code-icon">
+                    <i class="fas fa-code"></i>
+                </span>
+                <i class="far fa-smile-beam"></i>
+                I'm a
+                <span class='console-container'><span id='text'></span>
+                    <span class='console-underscore' id='console'>&#95;</span>
+                </span>
+                from the Southside VietNam
+                <span class="code-icon">
+                    <i class="fas fa-code"></i>
+                </span>
+
+            </p>
+            <ul class="header__list header__navigation">
+                <li class="navigation__item">
+                    <a class="animated-button" href="#home" style="--clr:#18d26e;--i:0">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a class="" href="#about" style="--clr:#f53b57;--i:0">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a class="" href="#resume" style="--clr:#ffa801;--i:0">
+                        <span>Resume</span>
+                    </a>
+                </li>
+                <li class="sevice-check navigation__item">
+                    <a class="" href="#services" style="--clr:#0fbcf9;--i:0">
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a class="" href="#portfolio" style="--clr:#18d26e;--i:0">
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a class="" href="#contact" style="--clr:#5d62fb;--i:0">
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- <div class="header__list header__social">
+                <a href="">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div> -->
+            <div class="header__social indicator-navigation">
+                <ul class="indicator-navigation__list">
+                    <li class="indicator-navigation__item" style="--iclr:#f53b57">
+                        <a href="">
+                            <span class="indicator-navigation__icon">
+                                <!-- <ion-icon name="home-outline"></ion-icon> -->
+
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                            <span class="indicator-navigation__text">Twiter</span>
+                        </a>
+                    </li>
+                    <li class="indicator-navigation__item" style="--iclr:#5d62fb">
+                        <a href="">
+                            <span class="indicator-navigation__icon">
+                                <!-- <ion-icon name="person-outline"></ion-icon> -->
+                                <i class="fab fa-facebook-f"></i>
+                            </span>
+                            <span class="indicator-navigation__text">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="indicator-navigation__item" style="--iclr:#0fbcf9">
+                        <a href="">
+                            <span class="indicator-navigation__icon">
+                                <!-- <ion-icon name="help-circle-outline"></ion-icon> -->
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                            <span class="indicator-navigation__text">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="indicator-navigation__item" style="--iclr:#ffa801">
+                        <a href="">
+                            <span class="indicator-navigation__icon">
+                                <!-- <ion-icon name="chatbubbles-outline"></ion-icon> -->
+                                <i class="fab fa-linkedin"></i>
+                            </span>
+                            <span class="indicator-navigation__text">Linkined</span>
+                        </a>
+                    </li>
+                    <div class="indicator"></div>
+                </ul>
+            </div>
+
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- <div class="clock hide">
+            <div class="hour">
+                <div class="hr" id="hr"></div>
+            </div>
+            <div class="min">
+                <div class="mn" id="mn"></div>
+            </div>
+            <div class="sec">
+                <div class="sc" id="sc"></div>
+            </div>
+        </div> -->
+        <!-- <div class="cv">
+            <a class="cv-fixed-btn hide" href="#" style="--clr:#18d26e;--i:2">
+                <span class="animated-text cv-text" data-text="Check_CV...">Check_CV...</span>
+            </a>
+            <div class="cv-content hide">
+                <i class="fas fa-times cv-close"></i>
+                <embed src="./assets/images/cv.pdf" width="100%" />
+            </div>
+        </div> -->
+    </div>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="section grid wide hide">
+        <div class="about-container">
+            <div class="section-title">
+                <p>About</p>
+                <h1>Learn more about me</h1>
+            </div>
+            <div class="about-content">
+                <div class="row">
+                    <div class="col l-4 m-12 c-12">
+                        <div class="about__avatar">
+                            <img src="./assets/images/avatar.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col l-8 m-12 c-12">
+                        <div class="about__infor">
+                            <h2>Coder & LOL player</h2>
+
+                            <pre><code>if(noMoney || noCode || noPressure || noGirl || noGame || noDrink || noRelax) {
+    return "no happy completely";
+}</code></pre>
+                            <div class="row">
+                                <div class="col l-6 m-12 c-12">
+                                    <ul class="about__list">
+                                        <li class="about__item">
+                                            <i class="fas fa-angle-right"></i>
+                                            <span class="label">Birthday: </span>
+                                            <span class="infor">02 October 2000</span>
+                                        </li>
+                                        <li class="about__item">
+                                            <i class="fas fa-angle-right"></i>
+                                            <span class="label">Website: </span>
+                                            <span class="infor">www.example.com</span>
+                                        </li>
+                                        <li class="about__item">
+                                            <i class="fas fa-angle-right"></i>
+                                            <span class="label">Phone: </span>
+                                            <span class="infor">+84 396 399 123</span>
+                                        </li>
+                                        <li class="about__item">
+                                            <i class="fas fa-angle-right"></i>
+                                            <span class="label">City: </span>
+                                            <span class="infor">Ho Chi Minh, Viet Nam</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col l-6 m-12 c-12">
+                                    <ul class="about__list">
+                                        <li class="about__item">
+                                            <i class="fas fa-angle-right"></i>
+                                            <span class="label">Age: </span>
+                                            <span class="infor">21</span>
+                                        </li>
+                                        <li class="about__item">
+                                            <i class="fas fa-angle-right"></i>
+                                            <span class="label">Degree: </span>
+                                            <span class="infor">College</span>
+                                        </li>
+                                        <li class="about__item">
+                                            <i class="fas fa-angle-right"></i>
+                                            <span class="label">Email: </span>
+                                            <span class="infor">nxgthanhcongcommunity@gmail.com</span>
+                                        </li>
+                                        <li class="about__item">
+                                            <i class="fas fa-angle-right"></i>
+                                            <span class="label">Freelance: </span>
+                                            <span class="infor">Unavailable</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>
+                                If you got me you have one more excitement and flexibility in your team. code 100 <=>
+                                    money 60+ or
+                                    mentor's solutions, that is motivation for a good cooperation to help me and our
+                                    company grow together. If I have no value I quit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-count">
+                <div class="row">
+                    <div class="col l-3 m-6 c-6">
+                        <div class="count-item">
+                            <i class="far fa-smile-beam"></i>
+                            <p class="count-item__number">02</p>
+                            <p class="count-item__title">Happy clients</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6">
+                        <div class="count-item">
+                            <i class="fas fa-rocket"></i>
+                            <p class="count-item__number">10+</p>
+                            <p class="count-item__title">Projects</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6">
+                        <div class="count-item">
+                            <i class="fas fa-headset"></i>
+                            <p class="count-item__number">10+ [example]</p>
+                            <p class="count-item__title">Hours Of Support</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-6">
+                        <div class="count-item">
+                            <i class="fas fa-medal"></i>
+                            <p class="count-item__number">3</p>
+                            <p class="count-item__title">Awards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-skill">
+                <div class="section-title">
+                    <p>Skills [example]</p>
+                </div>
+                <div class="row skill-container">
+                    <div class="col l-6 m-6 c-6">
+                        <div class="skill-item">
+                            <div class="skill-text">
+                                <span>HTML</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-percent-wrap" skill-value="80">
+                                <span class="skill-percent-bg"></span>
+                                <span class="skill-percent"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-6 c-6">
+                        <div class="skill-item">
+                            <div class="skill-text">
+                                <span>.Net Core</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-percent-wrap" skill-value="90">
+                                <span class="skill-percent-bg"></span>
+                                <span class="skill-percent"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-6 c-6">
+                        <div class="skill-item">
+                            <div class="skill-text">
+                                <span>CSS</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-percent-wrap" skill-value="60">
+                                <span class="skill-percent-bg"></span>
+                                <span class="skill-percent"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-6 c-6">
+                        <div class="skill-item">
+                            <div class="skill-text">
+                                <span>ReactJs</span>
+                                <span>20%</span>
+                            </div>
+                            <div class="skill-percent-wrap" skill-value="20">
+                                <span class="skill-percent-bg"></span>
+                                <span class="skill-percent"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-6 c-6">
+                        <div class="skill-item">
+                            <div class="skill-text">
+                                <span>Javascript</span>
+                                <span>40%</span>
+                            </div>
+                            <div class="skill-percent-wrap" skill-value="40">
+                                <span class="skill-percent-bg"></span>
+                                <span class="skill-percent"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-6 c-6">
+                        <div class="skill-item">
+                            <div class="skill-text">
+                                <span>English</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-percent-wrap" skill-value="60">
+                                <span class="skill-percent-bg"></span>
+                                <span class="skill-percent"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-interrest">
+                <div class="section-title">
+                    <p>INTERESTS [example]</p>
+                </div>
+                <div class="interrest-container">
+                    <div class="row">
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #ffbb2c">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #5578ff">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #e80368">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #e361ff">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #47aeff">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #ffa76e">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #11dbcf">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #4233ff">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #b2904f">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #b20969">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #ff5828">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-6">
+                            <div class="interest-item" style="--interest-item-color: #29cc61">
+                                <i class="fas fa-medal"></i>
+                                <span>Lorem Ipsum</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-testimonial">
+                <div class="section-title">
+                    <p>TESTIMONIALS [example]</p>
+                </div>
+                <div class="testimonial-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-auto__item">
+                                <p>
+                                    <i class="fas fa-quote-left"></i> Officiis eligendi itaque labore et dolorum
+                                    mollitia officiis optio vero.
+                                    Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia
+                                    tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+
+                                <div class="testimonial__person">
+                                    <img src="./assets/images/avatar.jpg" alt="">
+                                    <h4>Ng Thanh Cong</h4>
+                                    <p>Coder</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-auto__item">
+                                <p>
+                                    <i class="fas fa-quote-left"></i> Officiis eligendi itaque labore et dolorum
+                                    mollitia officiis optio vero.
+                                    Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia
+                                    tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+
+                                <div class="testimonial__person">
+                                    <img src="./assets/images/avatar.jpg" alt="">
+                                    <h4>Ng Thanh Cong</h4>
+                                    <p>Coder</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-auto__item">
+                                <p>
+                                    <i class="fas fa-quote-left"></i> Officiis eligendi itaque labore et dolorum
+                                    mollitia officiis optio vero.
+                                    Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia
+                                    tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+
+                                <div class="testimonial__person">
+                                    <img src="./assets/images/avatar.jpg" alt="">
+                                    <h4>Ng Thanh Cong</h4>
+                                    <p>Coder</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-auto__item">
+                                <p>
+                                    <i class="fas fa-quote-left"></i> Officiis eligendi itaque labore et dolorum
+                                    mollitia officiis optio vero.
+                                    Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia
+                                    tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+
+                                <div class="testimonial__person">
+                                    <img src="./assets/images/avatar.jpg" alt="">
+                                    <h4>Ng Thanh Cong</h4>
+                                    <p>Coder</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hide -->
+    <section id="resume" class="section grid wide hide">
+        <div class="about-container">
+            <div class="section-title">
+                <p>Resume</p>
+                <!-- <h1>Check my resume</h1> -->
+                <div class="cv">
+                    <a class="cv-fixed-btn" href="#" style="--clr:#18d26e;--i:2">
+                        <span class="animated-text cv-text" data-text="Check_CV...">Check_CV...</span>
+                    </a>
+                </div>
+            </div>
+            <div class="resume-content">
+                <div class="row">
+                    <div class="col l-6 m-12 c-12">
+                        <div class="resume__item">
+                            <h2>Sumary</h2>
+                            <div class="resume-item__content">
+                                <span class="resume-item__line">
+                                </span>
+                                <div class="resume-item__text">
+                                    <h3>brief description</h3>
+                                    <i>I'm 3rd year student at CaoThang college. If you got me you have one more
+                                        excitement and flexibility in your team. code 100
+                                        <=> money 60+ or mentor's solutions, that is motivation for a good cooperation
+                                            to help me and our company grow together. If I have no value I quit.
+                                    </i>
+                                    <ul>
+                                        <li>1102, Huynh Tan Phat</li>
+                                        <li>+84 396 399 123</li>
+                                        <li>nxgthanhcongcommunity@gmail.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume__item">
+                            <h2>Education</h2>
+                            <div class="resume-item__content">
+                                <span class="resume-item__line">
+                                </span>
+                                <div class="resume-item__text">
+                                    <h3>CAO THANG COLLEGE</h3>
+                                    <p><span>2018 - 2021</span></p>
+                                    <i>
+                                        I study information technology and have reported graduation project in early
+                                        November.
+                                    </i>
+                                    <ul>
+                                        <li>Be slass monitor</li>
+                                        <li>Recieved scholarships for studying semesters 3, 4 and 5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="resume-item__content">
+                                <span class="resume-item__line">
+                                </span>
+                                <div class="resume-item__text">
+                                    <h3>DOC BINH KIEU HIGH SCHOOL</h3>
+                                    <p><span>2015 - 2018</span></p>
+                                    <ul>
+                                        <li>Graded in senior class</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-12 c-12">
+                        <div class="resume__item">
+                            <h2>Experiences</h2>
+                            <div class="resume-item__content">
+                                <span class="resume-item__line">
+                                </span>
+                                <div class="resume-item__text">
+                                    <h3>3 month work as intern</h3>
+                                    <p><span>3/2021 - 6/2021</span></p>
+                                    <i>
+                                        I work at a company about SEO, can be call as Search Agency.
+                                        This is my a big step, I know more so many interesting things here, the best is
+                                        researching skill, I will expose
+                                        at interview
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="resume-item__content">
+                                <span class="resume-item__line">
+                                </span>
+                                <div class="resume-item__text">
+                                    <h3>2 month work as assistant</h3>
+                                    <p><span>10/2021 - 12/2021</span></p>
+                                    <i>I work at a company about HR Solutions Provider.
+                                        At here I work with Microsoft data center, make web on Sharepoint Online
+                                        platform,...
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section grid wide hide">
+        <div class="about-container">
+            <div class="section-title">
+                <p>Services</p>
+                <h1>My services</h1>
+            </div>
+            <div class="resume-content">
+                <div class="row">
+                    <div class="col l-4 m-6 c-12">
+                        <div class="service__item">
+                            <p class="icon">
+                                <i class="fab fa-android"></i>
+                            </p>
+                            <h2>Lorem Ipsum</h2>
+                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="service__item">
+                            <p class="icon">
+                                <i class="fab fa-android"></i>
+                            </p>
+                            <h2>Lorem Ipsum</h2>
+                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="service__item">
+                            <p class="icon">
+                                <i class="fab fa-android"></i>
+                            </p>
+                            <h2>Lorem Ipsum</h2>
+                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="service__item">
+                            <p class="icon">
+                                <i class="fab fa-android"></i>
+                            </p>
+                            <h2>Lorem Ipsum</h2>
+                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="service__item">
+                            <p class="icon">
+                                <i class="fab fa-android"></i>
+                            </p>
+                            <h2>Lorem Ipsum</h2>
+                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="service__item">
+                            <p class="icon">
+                                <i class="fab fa-android"></i>
+                            </p>
+                            <h2>Lorem Ipsum</h2>
+                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section grid wide hide">
+        <div class="about-container">
+            <div class="section-title">
+                <p>Contact</p>
+                <h1>Contact me</h1>
+            </div>
+            <div class="resume-content">
+                <div class="row">
+                    <div class="col l-6 m-6 c-12">
+                        <div class="contact__item">
+                            <p class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </p>
+                            <div class="contact-text">
+                                <h3>My Address</h3>
+                                <p>1102 Huynh Tan Phat, P.Tan Phu, Q7, TP.HCM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-6 c-12">
+                        <div class="contact__item">
+                            <p class="icon">
+                                <i class="fas fa-share-alt"></i>
+                            </p>
+
+                            <div class="contact-text">
+                                <h3>Socials</h3>
+                                <p>
+                                    <a href="">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-6 c-12">
+                        <div class="contact__item">
+                            <p class="icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </p>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>nxgthanhcongc</p>
+                                <!-- ommunity@gmail.com -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-6 c-12">
+                        <div class="contact__item">
+                            <p class="icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </p>
+                            <div class="contact-text">
+                                <h3>Phone number</h3>
+                                <p>+84 396 399 123</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-12">
+                        <div class="contact__form">
+                            <div class="row">
+                                <div class="col l-6 m-6 c-12">
+                                    <input type="text" placeholder="Your name">
+                                </div>
+                                <div class="col l-6 m-6 c-12">
+                                    <input type="text" placeholder="Your email">
+                                </div>
+                                <div class="col l-12 m-12 c-12">
+                                    <input type="text" placeholder="Subject">
+                                </div>
+                                <div class="col l-12 m-12 c-12">
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <button class="form-submit-btn">
+                                Send message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section grid wide hide">
+        <div class="about-container">
+            <div class="section-title">
+                <p>Portfolio</p>
+                <h1>My works</h1>
+            </div>
+            <div class="resume-content">
+                <div class="row">
+                    <div class="col l-4 m-6 c-12">
+                        <div class="portfolio__item">
+                            <img src="./assets/images/portfolio/portfolio-1.jpg" alt="">
+                            <div class="item-content">
+                                <h3>App1</h3>
+                                <p>App</p>
+                                <p>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-link"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="portfolio__item">
+                            <img src="./assets/images/portfolio/portfolio-2.jpg" alt="">
+                            <div class="item-content">
+                                <h3>App1</h3>
+                                <p>App</p>
+                                <p>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-link"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="portfolio__item">
+                            <img src="./assets/images/portfolio/portfolio-3.jpg" alt="">
+
+                            <div class="item-content">
+                                <h3>App1</h3>
+                                <p>App</p>
+                                <p>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-link"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="portfolio__item">
+                            <img src="./assets/images/portfolio/portfolio-4.jpg" alt="">
+
+                            <div class="item-content">
+                                <h3>App1</h3>
+                                <p>App</p>
+                                <p>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-link"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="portfolio__item">
+                            <img src="./assets/images/portfolio/portfolio-5.jpg" alt="">
+
+                            <div class="item-content">
+                                <h3>App1</h3>
+                                <p>App</p>
+                                <p>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-link"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="portfolio__item">
+                            <img src="./assets/images/portfolio/portfolio-6.jpg" alt="">
+
+                            <div class="item-content">
+                                <h3>App1</h3>
+                                <p>App</p>
+                                <p>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-link"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="portfolio__item">
+                            <img src="./assets/images/portfolio/portfolio-7.jpg" alt="">
+                            <div class="item-content">
+                                <h3>App1</h3>
+                                <p>App</p>
+                                <p>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-link"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="portfolio__item">
+                            <img src="./assets/images/portfolio/portfolio-8.jpg" alt="">
+                            <div class="item-content">
+                                <h3>App1</h3>
+                                <p>App</p>
+                                <p>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-link"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="portfolio__item">
+                            <img src="./assets/images/portfolio/portfolio-9.jpg" alt="">
+                            <div class="item-content">
+                                <h3>App1</h3>
+                                <p>App</p>
+                                <p>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-link"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="gallery-wrap">
+        <div class="portfolio__gallery hide">
+            <img src="./assets/images/portfolio/portfolio-2.jpg" alt="">
+            <div class="gallery-icon icon-next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="gallery-icon icon-prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="gallery-icon icon-close">
+                <i class="fas fa-close"></i>
+            </div>
+        </div>
+        <div class="portfolio__detail hide">
+            <div class="portfolio__detail-wrap">
+                <h2>This is an example of portfolio detail</h2>
+                <div class="row">
+                    <div class="col l-8 m-12 c-12">
+                        <!-- <img src="./assets/images/portfolio/portfolio-2.jpg" alt=""> -->
+                        <div class="portfolio__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/portfolio/portfolio-2.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/portfolio/portfolio-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="detail__item col l-4 m-12 c-12">
+                        <h3>Project information</h3>
+                        <p><span>Category: </span>Web design</p>
+                        <p><span>Client: </span>ASU Company</p>
+                        <p><span>Project date: </span>01 March, 2020</p>
+                        <p><span>Project URL: </span>01 March, 2020</p>
+                        <i>
+                            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi
+                            labore
+                            quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque
+                            enim.
+                            Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi
+                            nulla at esse enim cum deserunt eius.
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__detail-icon icon-close">
+                <i class="fas fa-close"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer hide" id="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="footer__social">
+            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+            <li><a href=""><i class="fab fa-facebook-messenger"></i></a></li>
+            <li><a href=""><i class="fab fa-tiktok"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <ul class="footer__menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <p>© 2021 GitHub, Ng Thanh Cong coder</p>
+    </footer>
+    <!-- end footer -->
+
+    <!-- End About Section -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+    <script type="module" src="./assets/js/main.js"></script>
+    <script src="./assets/js/text_typing_animation.js"></script>
+
+    <script>
+        var eIndicatorNavigationItems = document.querySelectorAll(".indicator-navigation__item");
+        eIndicatorNavigationItems.forEach(item => {
+            item.addEventListener("mouseover", () => {
+                item.classList.add("active");
+            })
+            item.addEventListener("mouseleave", () => {
+                item.classList.remove("active");
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+/* Tablet + Phone */
+@media (max-width: 1023px) {
+    /* HEADER */
+
+    #header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #header p {
+        margin: 70px 0;
+    }
+
+    #header .menu-toggle {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1002;
+    }
+
+    #header h1 a {
+        font-size: 1.8em;
+        line-height: 65px;
+    }
+
+    .header__list.header__navigation {
+        display: flex;
+        opacity: 0;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        padding: 170px 0;
+        margin: 0;
+        background: black;
+        z-index: 1001;
+        transform: translateX(100%);
+        transition: 0.8s;
+        /* animation: outToIn 0.8s; */
+    }
+
+    .header__list.header__navigation--mobile {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    @keyframes outToIn {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes inToOut {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+
+    .header__list.header__navigation--mobile {
+        display: flex;
+    }
+
+    .header__list.header__social {
+        margin: 20px auto;
+    }
+
+    #header.active .menu-toggle {
+        position: relative;
+        top: unset;
+        right: unset;
+    }
+
+    /* ABOUT */
+    .about__list {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .about__infor p {
+        margin: 30px 0;
+    }
+
+    .about__infor h2 {
+        margin: 20px 0;
+    }
+
+    section {
+        margin: auto;
+    }
+
+    .count-item {
+        margin-bottom: 24px;
+    }
+
+    .portfolio-details {
+        overflow-y: auto;
+    }
+
+    .portfolio-details::-webkit-scrollbar {
+        display: none;
+    }
+
+    .portfolio-details {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .section-title h1 {
+        line-height: 40px;
+    }
+
+    .clock {
+        display: none;
+    }
+
+    iframe {
+        right: 0;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .header__social.indicator-navigation {
+        margin: 0 auto;
+    }
+}
+
+/* Phone */
+@media (max-width: 739px) {
+    .header__list.header__navigation {
+        width: 100vw;
+        padding: 170px 40px;
+    }
+
+    .header__list.header__navigation li,
+    .header__list.header__navigation li a {
+        width: 100%;
+    }
+
+    #header.active .container {
+        padding: 0 32px;
+    }
+
+    #header h1 {
+        font-size: 1.4em;
+    }
+
+    .footer__menu {
+        display: none;
+    }
+
+    iframe {
+        right: 0;
+        width: 100%;
+        bottom: 0;
+        height: 160px;
+    }
+
+    #header .svgText {
+        font: 3em "Montserrat";
+        width: 380px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    #header.active .svgText {
+        font: 2.2em "Montserrat";
+        width: 400px;
+        height: 40px;
+    }
+
+    .text-copy {
+        stroke-width: 2px;
+    }
+}
+
+@media (max-width: 376px) {
+    #header.active .svgText {
+        font: 2em "Montserrat";
+        width: 400px;
+        height: 40px;
+    }
+}
